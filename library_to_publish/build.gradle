@@ -11,7 +11,7 @@ android {
     defaultConfig {
         minSdkVersion 23
         targetSdkVersion 28
-        versionCode 5
+        versionCode 6
         versionName getVersionName()
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -31,7 +31,7 @@ def githubProperties = new Properties()
 githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
 
 def getVersionName = { ->
-    return "1.0.5"
+    return "1.0.6"
 }
 
 def getArtificatId = { ->
@@ -41,7 +41,7 @@ def getArtificatId = { ->
 publishing {
     publications {
         Production(MavenPublication) {
-            groupId 'com.avp.test.githubpackages' // Replace with group ID
+            groupId 'com.avp.test.lib.githubpackages' // Replace with group ID
             artifactId getArtificatId()
             version getVersionName()
             artifact("$buildDir/outputs/aar/${getArtificatId()}-release.aar")
