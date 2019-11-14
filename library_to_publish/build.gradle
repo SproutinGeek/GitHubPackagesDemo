@@ -35,7 +35,7 @@ def getVersionName = { ->
 }
 
 def getArtificatId = { ->
-    return "library_to_push"
+    return "library_to_publish"
 }
 
 publishing {
