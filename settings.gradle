@@ -1,0 +1,2 @@
+include ':app', ':library_to_publish'
+rootProject.name='GitHubPackagesDemo'
